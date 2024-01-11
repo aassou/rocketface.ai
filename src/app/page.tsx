@@ -9,9 +9,12 @@ export default function Home() {
 
   return (
     <div className="pt-4 pb-32">
-      <RocketLaunchIcon 
-        className="inline-block h-10 w-10 text-green-500" 
-      />
+      <div className="ml-10">
+        <RocketLaunchIcon 
+          className="inline-block h-10 w-10 text-green-700" 
+        />
+        <h1 className="font-mono font-semibold inline-block h-10 w-10 text-green-700">RocketFace</h1>
+      </div>
       {messages.map((message) => (
         (
           <div 
@@ -24,9 +27,9 @@ export default function Home() {
               {
                 message.role === "assistant" 
                 && 
-                <RocketLaunchIcon 
-                  className="inline-block h-10 w-10 text-black-300" 
-                />
+                  <RocketLaunchIcon 
+                    className="h-10 w-10 text-black-300" 
+                  />
               }
               <span className="ml-3">{message.content}</span>
             </div>
